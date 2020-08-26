@@ -3,13 +3,13 @@
 template<typename First>
 void print(const First& first)
 {
-	std::cout << first << std::endl;
+	std::cout << first << " : " << typeid(first).name() << std::endl;
 }
 
 template<typename First, typename... Rest>
 void print(const First& first, const Rest&... rest)
 {
-	std::cout << first << std::endl;
+	std::cout << first << " : " << typeid(first).name() << std::endl;
 	return print(rest...);
 }
 
